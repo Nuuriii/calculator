@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Calculator</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <main class="grid justify-center">
+      <div class="flex mt-10 bg-sky-300 justify-center h-20 border-black border-2 border-solid rounded-lg">
+        <input id="display" class="bg-gray-100 h-10 w-1/2 m-auto border-gray-900 border-2 border-solid rounded-lg" type="text" />
+      </div>
+      <div class="flex justify-center bg-sky-400 p-5 border-solid border-2 border-black rounded-lg">
+        <div class="grid grid-cols-3 gap-10">
+          <input type="button" value="1" onclick="addToDisplay('1')" class="text-white bg-zinc-900 hover:bg-zinc-700 border-solid border-2 border-stone-500 w-20 rounded-lg" />
+
+          <input type="button" value="2" onclick="addToDisplay('2')" class="text-white bg-zinc-900 hover:bg-zinc-700 border-solid border-2 border-stone-500 w-20 rounded-lg" />
+
+          <input type="button" value="3" onclick="addToDisplay('3')" class="text-white bg-zinc-900 hover:bg-zinc-700 border-solid border-2 border-stone-500 w-20 rounded-lg" />
+
+          <input type="button" value="4" onclick="addToDisplay('4')" class="text-white bg-zinc-900 hover:bg-zinc-700 border-solid border-2 border-stone-500 w-20 rounded-lg" />
+
+          <input type="button" value="5" onclick="addToDisplay('5')" class="text-white bg-zinc-900 hover:bg-zinc-700 border-solid border-2 border-stone-500 w-20 rounded-lg" />
+
+          <input type="button" value="6" onclick="addToDisplay('6')" class="text-white bg-zinc-900 hover:bg-zinc-700 border-solid border-2 border-stone-500 w-20 rounded-lg" />
+
+          <input type="button" value="7" onclick="addToDisplay('7')" class="text-white bg-zinc-900 hover:bg-zinc-700 border-solid border-2 border-stone-500 w-20 rounded-lg" />
+
+          <input type="button" value="8" onclick="addToDisplay('8')" class="text-white bg-zinc-900 hover:bg-zinc-700 border-solid border-2 border-stone-500 w-20 rounded-lg" />
+
+          <input type="button" value="9" onclick="addToDisplay('9')" class="text-white bg-zinc-900 hover:bg-zinc-700 border-solid border-2 border-stone-500 w-20 rounded-lg" />
+
+          <input type="button" value="0" onclick="addToDisplay('0')" class="text-white bg-zinc-900 hover:bg-zinc-700 border-solid border-2 border-stone-500 w-20 rounded-lg" />
+
+          <input type="button" value="C" onclick="clearDisplay('')" class="text-white bg-zinc-900 hover:bg-zinc-700 border-solid border-2 border-stone-500 w-20 rounded-lg" />
+
+          <input type="button" value="=" onclick="calculate()" class="text-white bg-zinc-900 hover:bg-zinc-700 border-solid border-2 border-stone-500 w-20 rounded-lg" />
+        </div>
+
+        <div class="grid grid-cols-1 gap-4 ml-9">
+          <input type="button" value="+" onclick="addToDisplay('+')" class="border-solid border-stone-500 rounded-lg border-2 p-4 w-20 bg-stone-900 hover:bg-stone-700 text-sky-400 font-extrabold" />
+          <input type="button" value="-" onclick="addToDisplay('-')" class="border-solid border-stone-500 rounded-lg border-2 p-4 w-20 bg-stone-900 hover:bg-stone-700 text-sky-400 font-extrabold" />
+          <input type="button" value="x" onclick="addToDisplay('*')" class="border-solid border-stone-500 rounded-lg border-2 p-4 w-20 bg-stone-900 hover:bg-stone-700 text-sky-400 font-extrabold" />
+          <input type="button" value=":" onclick="addToDisplay('/')" class="border-solid border-stone-500 rounded-lg border-2 p-4 w-20 bg-stone-900 hover:bg-stone-700 text-sky-400 font-extrabold" />
+        </div>
+      </div>
+    </main>
+    <script src="/script/script.js"></script>
+  </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <title>Kalkulator</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+      input[type="button"] {
+        background-color: #4caf50;
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Kalkulator</h1>
+    <form>
+      <input type="text" id="display" readonly />
+      <br />
+      <input type="button" value="1" onclick="addToDisplay('1')" />
+      <input type="button" value="2" onclick="addToDisplay('2')" />
+      <input type="button" value="3" onclick="addToDisplay('3')" />
+      <input type="button" value="+" onclick="addToDisplay('+')" />
+      <br />
+      <input type="button" value="4" onclick="addToDisplay('4')" />
+      <input type="button" value="5" onclick="addToDisplay('5')" />
+      <input type="button" value="6" onclick="addToDisplay('6')" />
+      <input type="button" value="-" onclick="addToDisplay('-')" />
+      <br />
+      <input type="button" value="7" onclick="addToDisplay('7')" />
+      <input type="button" value="8" onclick="addToDisplay('8')" />
+      <input type="button" value="9" onclick="addToDisplay('9')" />
+      <input type="button" value="*" onclick="addToDisplay('*')" />
+      <br />
+      <input type="button" value="C" onclick="clearDisplay()" />
+      <input type="button" value="0" onclick="addToDisplay('0')" />
+      <input type="button" value="=" onclick="calculate()" />
+      <input type="button" value="/" onclick="addToDisplay('/')" />
+    </form>
+
+    <script src="/calculator/script/script.js"></script>
+  </body>
+</html> -->
